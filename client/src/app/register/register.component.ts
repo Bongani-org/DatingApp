@@ -9,7 +9,7 @@ import { AccountService } from '../_services/account.service';
 })
 export class RegisterComponent implements OnInit {
   @Output() cancelRegister = new EventEmitter();
-  model: any;
+  model: any = {};
 
   constructor(private accountService: AccountService, private toastr: ToastrService) { }
 
