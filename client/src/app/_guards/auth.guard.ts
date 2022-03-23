@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { AccountService } from '../_services/account.service';
 
 @Injectable({
@@ -15,7 +16,7 @@ export class AuthGuard implements CanActivate {
     map(user => {
       if (user) { return true; }
       this.toastr.error('You shall not pass!');
-    return false;
+      return false;
   })
   );
   }
