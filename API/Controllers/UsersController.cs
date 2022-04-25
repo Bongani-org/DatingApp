@@ -31,6 +31,7 @@ namespace API.Controllers
             this._mapper = mapper;
         }
 
+
         // api/users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
