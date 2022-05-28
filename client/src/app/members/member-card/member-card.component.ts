@@ -24,4 +24,8 @@ export class MemberCardComponent implements OnInit {
     })
   }
 
+  addVisit(member: Member) {
+    this.memberService.addVisit(member.username);
+  }
+
 }
